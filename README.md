@@ -34,5 +34,5 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
        - Create a homepage where users can view their accounts and passwords
        - Set up the database to store user's accounts and passwords.
 
-  - Miscellaneous: Will decide on who will work on the Dynamic Analysis portion of the third assignment on a later date.
+**Miscellaneous:** Will decide on who will work on the Dynamic Analysis portion of the third assignment on a later date.
 
