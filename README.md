@@ -15,7 +15,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 **Team Members and their roles:**
 
-**Victor Jodan**
+**Victor Jodar**
   - What has been done: 
        - Initial setup for the repository using the meteor application template.
        - Creation of the report for the first assignment. Worked on the _Introduction_ and _Design_ portions of the report.
