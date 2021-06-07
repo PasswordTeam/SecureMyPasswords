@@ -21,7 +21,8 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
        - Creation of the report for the first assignment. Worked on the _Introduction_ and _Design_ portions of the report.
        - Worked on the _Deprecated/Unsafe Functions_ and _Static Analysis_ portion of the second assignment.
   - What will be handled next:
-       - Insert Assignment 3 portion here
+       - Attack Surface Review portion of the third assignment.
+       - Create a password generated page where users can generate a password.
 
 **Jay Paul Luben**
   - What has been done: 
@@ -29,6 +30,8 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
        - Initial setup of the Automated Kanban board in Github for the repository.
        - Worked on the _README_ and _Approved Tools_ portion of the second assignment.
   - What will be handled next:
-       - Insert Assignment 3 portion here
+       - Adding onto the _README_ for the third assignment.
+       - Create a homepage where users can view their accounts and passwords
+       - Set up the database to store user's accounts and passwords.
 
 
