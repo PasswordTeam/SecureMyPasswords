@@ -12,8 +12,8 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
   - Coding a password manager application using the meteor template provided
   - Creating a simple UI for the application for users to interact through
   - Check on the security for the application
-**
-Team Members and their roles:**
+
+**Team Members and their roles:**
 
 **Victor Jodan**
   - What has been done: 
