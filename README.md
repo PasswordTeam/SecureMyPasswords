@@ -3,7 +3,7 @@
 For details, please see http://ics-software-engineering.github.io/meteor-application-template-react/
 
 
-##6/6/21
+**6/6/21**
 
 **Completed:**
   - Setting up a repository for the application.
