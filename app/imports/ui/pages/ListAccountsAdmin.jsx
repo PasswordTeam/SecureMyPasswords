@@ -3,11 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import ContactAdmin from '../components/ContactAdmin';
-import { Contacts } from '../../api/contact/Contacts';
+import ContactAdmin from '../components/AccountAdmin';
+import { Account } from '../../api/account/Account';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListContactsAdmin extends React.Component {
+class ListAccountsAdmin extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,7 +18,7 @@ class ListContactsAdmin extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center" color='grey'>List Contacts (Admin)</Header>
+        <Header as="h2" textAlign="center" color='grey'>List Accounts (Admin)</Header>
         <Card.Group>
           {this.props.contacts.map((contact, index) => <ContactAdmin key={index} contact={contact}/>)}
         </Card.Group>
@@ -28,7 +28,7 @@ class ListContactsAdmin extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-ListContactsAdmin.propTypes = {
+ListAccountsAdmin.propTypes = {
   contacts: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -36,9 +36,9 @@ ListContactsAdmin.propTypes = {
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Contacts.adminPublicationName);
+  const subscription = Meteor.subscribe(Account.adminPublicationName);
   return {
-    contacts: Contacts.collection.find({}).fetch(),
+    contacts: Account.collection.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListContactsAdmin);
+})(ListAccountsAdmin);

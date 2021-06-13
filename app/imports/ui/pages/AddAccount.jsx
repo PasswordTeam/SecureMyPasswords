@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { Contacts } from '../../api/contact/Contacts';
+import { Account } from '../../api/account/Account';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
@@ -17,13 +17,13 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /** Renders the Page for adding a document. */
-class AddContact extends React.Component {
+class AddAccount extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
     const { website, login, password } = data;
     const owner = Meteor.user().username;
-    Contacts.collection.insert({ website, login, password, owner },
+    Account.collection.insert({ website, login, password, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -40,7 +40,7 @@ class AddContact extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Add Contact</Header>
+          <Header as="h2" textAlign="center">Add Account</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='website'/>
@@ -56,4 +56,4 @@ class AddContact extends React.Component {
   }
 }
 
-export default AddContact;
+export default AddAccount;
