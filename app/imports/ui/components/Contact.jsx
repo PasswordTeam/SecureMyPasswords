@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -9,11 +9,6 @@ class Contact extends React.Component {
     return (
       <Card centered>
         <Card.Content>
-          <Image
-            floated='right'
-            size='mini'
-            src={this.props.contact.image}
-          />
           <Card.Header>{this.props.contact.firstName} {this.props.contact.lastName}</Card.Header>
           <Card.Meta>{this.props.contact.address}</Card.Meta>
           <Card.Description>

@@ -22,8 +22,8 @@ class EditContact extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { firstName, lastName, address, image, description, _id } = data;
-    Contacts.collection.update(_id, { $set: { firstName, lastName, address, image, description } }, (error) => (error ?
+    const { firstName, lastName, address, _id } = data;
+    Contacts.collection.update(_id, { $set: { firstName, lastName, address } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
