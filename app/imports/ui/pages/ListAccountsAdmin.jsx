@@ -18,7 +18,7 @@ class ListAccountsAdmin extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center" color='grey'>List Accounts (Admin)</Header>
+        <Header as="h2" textAlign="center">List Accounts (Admin)</Header>
         <Card.Group>
           {this.props.contacts.map((contact, index) => <ContactAdmin key={index} contact={contact}/>)}
         </Card.Group>
