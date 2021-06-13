@@ -3,7 +3,7 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /**
- * The StuffsCollection. It encapsulates state and variable values for stuff.
+ * The ContactsCollection. It encapsulates state and variable values for stuff.
  */
 class ContactsCollection {
   constructor() {
@@ -30,6 +30,6 @@ class ContactsCollection {
 
 /**
  * The singleton instance of the StuffsCollection.
- * @type {StuffsCollection}
+ * @type {ContactsCollection}
  */
 export const Contacts = new ContactsCollection();
