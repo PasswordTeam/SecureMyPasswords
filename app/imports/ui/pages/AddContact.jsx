@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, LongTextField, SubmitField, TextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -9,11 +9,9 @@ import { Contacts } from '../../api/contact/Contacts';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
-  firstName: String,
-  lastName: String,
-  address: String,
-  image: String,
-  description: String,
+  website: String,
+  login: String,
+  password: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -23,9 +21,9 @@ class AddContact extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { firstName, lastName, address, image, description } = data;
+    const { website, login, password } = data;
     const owner = Meteor.user().username;
-    Contacts.collection.insert({ firstName, lastName, address, image, description, owner },
+    Contacts.collection.insert({ website, login, password, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -45,11 +43,9 @@ class AddContact extends React.Component {
           <Header as="h2" textAlign="center">Add Contact</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
-              <TextField name='firstName'/>
-              <TextField name='lastName'/>
-              <TextField name='address'/>
-              <TextField name='image'/>
-              <LongTextField name='description'/>
+              <TextField name='website'/>
+              <TextField name='login'/>
+              <TextField name='password'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>

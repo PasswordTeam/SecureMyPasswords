@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -9,19 +9,16 @@ class ContactAdmin extends React.Component {
     return (
       <Card centered>
         <Card.Content>
-          <Image
-            floated='right'
-            size='mini'
-            src={this.props.contact.image}
-          />
-          <Card.Header>{this.props.contact.firstName} {this.props.contact.lastName}</Card.Header>
-          <Card.Meta>{this.props.contact.address}</Card.Meta>
+          <Card.Header>{this.props.contact.website} </Card.Header>
           <Card.Description>
-            {this.props.contact.description}
+            <b>Login</b>: {this.props.contact.login}
+          </Card.Description>
+          <Card.Description>
+            <b>Password</b>: {this.props.contact.password}
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          {this.props.contact.owner}
+          <b>Owner</b>: {this.props.contact.owner}
         </Card.Content>
       </Card>
     );

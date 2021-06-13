@@ -5,7 +5,6 @@ import {
   AutoForm,
   ErrorsField,
   HiddenField,
-  LongTextField,
   SubmitField,
   TextField,
 } from 'uniforms-semantic';
@@ -22,8 +21,8 @@ class EditContact extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { firstName, lastName, address, _id } = data;
-    Contacts.collection.update(_id, { $set: { firstName, lastName, address } }, (error) => (error ?
+    const { website, login, password, _id } = data;
+    Contacts.collection.update(_id, { $set: { website, login, password } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -41,11 +40,9 @@ class EditContact extends React.Component {
           <Header as="h2" textAlign="center">Edit Contact</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
-              <TextField name='firstName'/>
-              <TextField name='lastName'/>
-              <TextField name='address'/>
-              <TextField name='image'/>
-              <LongTextField name='description'/>
+              <TextField name='website'/>
+              <TextField name='login'/>
+              <TextField name='password'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
               <HiddenField name='owner' />
