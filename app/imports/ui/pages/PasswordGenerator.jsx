@@ -30,7 +30,7 @@ const passwordGeneratorSchema = new SimpleSchema2Bridge(
         'length of password': 
         { 
             type: Number, 
-            min: 1, max: 50, 
+            min: 1, max: 25, 
             required: true 
         },
 
@@ -54,14 +54,14 @@ const passwordGeneratorSchema = new SimpleSchema2Bridge(
     })
   )
 
-/** A simple static component to render some text for the landing page. */
+/** A simple form to generate passwords. */
 class PasswordGenerator extends React.Component {
   render() {
     return (
       <Grid id='passwordGenerator' container centered>
 
         <Grid.Column width={5}>
-        <AutoForm schema={passwordGeneratorSchema} onSubmit={(model) => swal(passwordGenerator(model))}>
+        <AutoForm schema={passwordGeneratorSchema} onSubmit={(model) => swal(passwordGenerator(model), 'Make sure to copy the password to your clipboard', 'success')}>
             <Segment>
                 <AutoField name='length of password' decimal={false}/>
                 <AutoField name='include capital letters'/> 
