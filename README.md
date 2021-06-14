@@ -45,7 +45,8 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
   - A bit of cleanup from the template we used.
   
 **Link:**
-https://github.com/orgs/PasswordTeam/projects/1
+https://github.com/orgs/PasswordTeam/projects/1 
+
 This link brings you to our automated kanban board where we keep track of issues.
 
 **Pending:**
