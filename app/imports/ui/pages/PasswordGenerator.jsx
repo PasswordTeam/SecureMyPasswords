@@ -12,7 +12,7 @@ function passwordGenerator(formModel) {
   const numbers = Array.from('1234567890');
   const specialCharacters = Array.from('!@#$%^*');
   let characterPool = lowerCaseLetters;
-  let generatedPassword = '';
+  let generatedPassword = ''
 
   if (formModel['include capital letters']) { characterPool = characterPool.concat(upperCaseLetters); }
   if (formModel['include numbers']) { characterPool = characterPool.concat(numbers); }
