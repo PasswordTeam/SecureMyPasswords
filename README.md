@@ -47,6 +47,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 **Link:**
 
 https://github.com/orgs/PasswordTeam/projects/1 
+
 This link brings you to our automated kanban board where we keep track of issues.
 
 **Pending:**
