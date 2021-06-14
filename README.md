@@ -66,7 +66,9 @@ This link brings you to our automated kanban board where we keep track of issues
 **Jay Paul Luben**
   - New Completions: 
        - Implemented the database that holds users account & password information (NOT SECURED/ENCRYPTED).
-       - 
+       - Homepage for users to look at their accounts & passwords.
+       - Edit page for users to edit their accounts & passwords.
+       - Add page for users to add their accounts & passwords.
   - Current:
        - None
   - Next:
