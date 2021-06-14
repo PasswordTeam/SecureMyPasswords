@@ -50,7 +50,7 @@ This link brings you to our automated kanban board where we keep track of issues
 
 **Pending:**
   - Have the database encrypted so it doesn't pose a security threat.
-  - Clean up the application interface (change the footer, homepage, etc. to fit our application).
+  - Clean up the application interface (change the footer, landing page, etc. to fit our application).
 
 **Team Members and their roles:**
 
