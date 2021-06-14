@@ -36,3 +36,42 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 **Miscellaneous:** Will decide on who will work on the Dynamic Analysis portion of the third assignment on a later date.
 
+
+**6/13/21**
+
+**Progress:**
+  - Addition of the password generator page for the application.
+  - Implemented users account & password database for the application.
+  - A bit of cleanup from the template we used.
+  
+**Link:**
+https://github.com/orgs/PasswordTeam/projects/1
+This link brings you to our automated kanban board where we keep track of issues.
+
+**Pending:**
+  - Have the database encrypted so it doesn't pose a security threat.
+  - Clean up the application interface (change the footer, homepage, etc. to fit our application).
+
+**Team Members and their roles:**
+
+**Victor Jodar**
+  - New Completions: 
+       - Implemented the password generator page.
+  - Current:
+       - Writing up the report for Assignment 3 (both Dynamic Analysis & Attack Surface Review sections).
+  - Next:
+       - Improving the password generator.
+       - Cleaning up template stuff from the application.
+
+**Jay Paul Luben**
+  - New Completions: 
+       - Implemented the database that holds users account & password information (NOT SECURED/ENCRYPTED).
+       - 
+  - Current:
+       - None
+  - Next:
+       - Encrypt the database to make it secure
+          - As it stands now, the database of users accounts & passwords are in plain text. Figure out a way to encrypt them.
+       - Cleaning up template stuff from the application.
+
+
