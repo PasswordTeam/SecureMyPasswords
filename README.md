@@ -36,7 +36,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 **Miscellaneous:** Will decide on who will work on the Dynamic Analysis portion of the third assignment on a later date.
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **6/13/21**
 
 **Progress:**
