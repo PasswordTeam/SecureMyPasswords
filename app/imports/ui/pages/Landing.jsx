@@ -7,8 +7,9 @@ class Landing extends React.Component {
     return (
       <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
 
-        <Grid.Column width={4}>
-          <Image size='small' circular src="\images\application-logo.png"/>
+        <Grid.Column width={4}> 
+        {/* Tried to replace logo image with custom "application-logo.png", but doesn't appear on page */}
+          <Image size='small' circular src="\images\meteor-logo.png"/> 
         </Grid.Column>
 
         <Grid.Column width={8}>
