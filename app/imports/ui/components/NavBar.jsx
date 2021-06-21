@@ -13,7 +13,7 @@ class NavBar extends React.Component {
     return (
       <Menu style={menuStyle} attached="top" borderless inverted color='black'>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header inverted as='h1'>PasswordTeam</Header>
+          <Header inverted as='h1'>SecureMyPasswords</Header>
         </Menu.Item>
         {this.props.currentUser ? (
           [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Account</Menu.Item>,
