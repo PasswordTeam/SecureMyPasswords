@@ -12,7 +12,8 @@ function addContact(data) {
 // Initialize the ContactsCollection if empty.
 if (Account.collection.find().count() === 0) {
   if (Meteor.settings.defaultContacts) {
-    console.log('Creating default Account.');
+    console.log('Creating default Accounts.');
     Meteor.settings.defaultContacts.map(data => addContact(data));
   }
 }
+

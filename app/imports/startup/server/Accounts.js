@@ -26,3 +26,7 @@ if (Meteor.users.find().count() === 0) {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
   }
 }
+
+Accounts.config({
+  loginExpirationInDays: 0.02,
+});
