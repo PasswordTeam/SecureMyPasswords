@@ -79,3 +79,37 @@ This link brings you to our automated kanban board where we keep track of issues
        - Cleaning up template stuff from the application.
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**6/20/21**
+
+**Progression Since Last Week:**
+  - Fuzz Testing the application.
+  - Static Analysis Review for the Report.
+  - Dynamic Review for the report.
+  - Cleaned the template to better reflect our application.
+
+**Pending:**
+  - Database encryption for listing Account information still needs to be done.
+
+**Team Members and their roles:**
+
+**Victor Jodar**
+  - New Completions: 
+       - Cleaned template settings to better reflect our application.
+          - The Footer, Homepage, and Navbar now better suits our application with the name SecureMyPasswords.
+       - Fuzz Testing the application.
+       - Static Analysis Review portion of the Report.
+       - Dynamic Review portion of the Report.
+  - Next:
+       - Creation of the Wiki Page for the project.
+       - Incident Response Plan portion of the Report.
+       - Final Security Review portion of the Report.
+
+**Jay Paul Luben**
+  - New Completions: 
+       - Updated the README for Assignment 4.
+  - Next:
+       - Encrypt the database to make it secure (Priority).
+       - Creation of the Wiki Page for the project.
+       - Release the final version of the application.
+       - Certified Release & Archive Report section of the Report.
