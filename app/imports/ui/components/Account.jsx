@@ -7,9 +7,8 @@ import { withRouter, Link } from 'react-router-dom';
 class Account extends React.Component {
 
   copyToClipboard = () => {
-    const copyText = this.myInput
-    copyText.select()
-    document.execCommand("copy")
+    const copyText = this.myInput;
+    navigator.clipboard.writeText(copyText.value);
   }
 
   render() {
@@ -24,7 +23,7 @@ class Account extends React.Component {
           </Card.Description>
           <Card.Description>
             <b>Password</b>: <div class="ui transparent input">
-              <input ref={(input) => this.myInput = input} type="text" value={this.props.contact.password}/> 
+              <input ref={(input) => this.myInput = input} type="password" value={this.props.contact.password}/> 
               </div>
               <button class="ui compact button" onClick={() => this.copyToClipboard()}>
                 <i className="copy outline icon"/>Copy password to clipboard
