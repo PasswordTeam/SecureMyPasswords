@@ -5,17 +5,33 @@ import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Contact table. */
 class AccountAdmin extends React.Component {
+
+  copyToClipboard = () => {
+    const copyText = this.myInput;
+    navigator.clipboard.writeText(copyText.value);
+  }
+
   render() {
     return (
-      <Card centered>
+      <Card fluid centered>
         <Card.Content>
           <Card.Header>{this.props.contact.website} </Card.Header>
+        </Card.Content>
+        <Card.Content>
           <Card.Description>
-            <b>Login</b>: {this.props.contact.login}
+            <b>Login</b>: <div className="ui transparent input">
+              <input type="text"value={this.props.contact.login}/>
+              </div>
           </Card.Description>
           <Card.Description>
-            <b>Password</b>: {this.props.contact.password}
+            <b>Password</b>: <div className="ui transparent input">
+              <input ref={(input) => this.myInput = input} type="password" value={this.props.contact.password}/> 
+              </div>
           </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <button class="ui button" onClick={() => this.copyToClipboard()}>
+            <i className="copy outline icon"/>Copy password to clipboard</button>
         </Card.Content>
         <Card.Content extra>
           <b>Owner</b>: {this.props.contact.owner}

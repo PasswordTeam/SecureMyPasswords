@@ -13,25 +13,26 @@ class Account extends React.Component {
 
   render() {
     return (
-      <Card centered>
+      <Card fluid centered>
         <Card.Content>
           <Card.Header>{this.props.contact.website} </Card.Header>
+        </Card.Content>
+        <Card.Content>
           <Card.Description>
-            <b>Login</b>: <div class="ui transparent input">
+            <b>Login</b>: <div className="ui transparent input">
               <input type="text"value={this.props.contact.login}/>
               </div>
           </Card.Description>
           <Card.Description>
-            <b>Password</b>: <div class="ui transparent input">
+            <b>Password</b>: <div className="ui transparent input">
               <input ref={(input) => this.myInput = input} type="password" value={this.props.contact.password}/> 
               </div>
-              <button class="ui compact button" onClick={() => this.copyToClipboard()}>
-                <i className="copy outline icon"/>Copy password to clipboard
-                </button>
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Link to={`/edit/${this.props.contact._id}`}>Edit</Link>
+          <Link to={`/edit/${this.props.contact._id}`}><button className="ui button">Edit</button></Link>
+              <button className="ui button" onClick={() => this.copyToClipboard()}>
+                <i className="copy outline icon"/>Copy password to clipboard</button>
         </Card.Content>
 
       </Card>
