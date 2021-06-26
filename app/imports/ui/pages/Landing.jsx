@@ -9,7 +9,7 @@ class Landing extends React.Component {
 
         <Grid.Column width={4}> 
         {/* Tried to replace logo image with custom "application-logo.png", but doesn't appear on page */}
-          <Image size='small' circular src="\images\meteor-logo.png"/> 
+          <Image size='small' src="\images\application-logo.png"/> 
         </Grid.Column>
 
         <Grid.Column width={8}>
