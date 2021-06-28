@@ -113,3 +113,42 @@ This link brings you to our automated kanban board where we keep track of issues
        - Creation of the Wiki Page for the project.
        - Release the final version of the application.
        - Certified Release & Archive Report section of the Report.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**6/27/21**
+
+**Team members and their roles for the last part of the project:**
+
+**Victor Jodar**
+  - New Completions: 
+       - Addressed security concerns found during Fuzz Testing the application.
+          - Removed the Admin page (huge privacy concern).
+          - Passwords are shown as dots instead of plain text in the "List Accounts" tab.
+          - "List Accounts" tab is neater and strings no longer protrude outside of the card box.
+       - Creation of the Wiki Page for the project.
+       - Wrote up the _Incident Response Plan_, _Final Security Review_, & _Certified Release & Archive Report_ portions of the Report.
+       - Released the final version of the program on github.
+       
+**Jay Paul Luben**
+  - New Completions: 
+       - Updated the README for Assignment 5.
+       - Deployed the meteor application onto a Digital Ocean server, which can be found here: https://securemypasswords.xyz/
+          - This was not part of the assignment, but was done to see the application in real time.
+
+**Technical notes on the program e.g. specifications for use, how to install it:**
+  - The program was created using a Meteor application template found here: https://github.com/ics-software-engineering/meteor-application-template-react
+  - The user guide for the application can be found via the wiki page linked here: https://github.com/PasswordTeam/SecureMyPasswords/wiki/User-Guide
+
+**Brief closing thoughts on the outcome of the program:**
+  - Thanks to the meteor application template, creation of a password manager application was made simple. We could work off of a template rather than code the entirity of the website. Account creation is made secure thanks to the built in bcrypt function of the meteor application template.
+  - To our surprise, the basic functions of the application were done sooner than expected. We then spent the remaining time refining the application rather than including more features.
+  - The main caveat of the application is that account information added via the "Add Account" tab aren't encrypted. This means that the account login credentials are in plain text and are visible when checking the database via MongoDB.
+      - This privacy concern was why I (Jay Paul Luben) thought that encrypting the ContactsCollection database holding account information was necessary. However, only users had access to their own portions of the database, and no one elses. So encrypting the ContactsCollection database wasn't necessary.
+      - Admins with root access to the database however can still view all account information that is created via the "Add Account" tab. This is definitely a privacy concern that should be rectified in the future when time is available.
+
+**Online Repository Link:** https://github.com/PasswordTeam/SecureMyPasswords
+
+**Link to the final project documentation file within the repository:** https://github.com/PasswordTeam/SecureMyPasswords/blob/master/doc/Final_Project_Documentation.pdf
+
+**Link to the release version of the program:** https://github.com/PasswordTeam/SecureMyPasswords/releases/tag/v1.0
